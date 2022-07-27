@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  height: 48px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header ul li {
+  padding-left: 15px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+header ul li:last-child {
+  padding-right: 15px;
+}
+
+header div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header div span {
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+header div span svg {
+  font-size: 2.5em;
+  color: #5f6368;
+  padding: 8px;
+}
+
+header div span svg:hover {
+  cursor: pointer;
+  background-color: #00000018;
+  border-radius: 50%;
+}
+
+header div button {
+  margin: 0 8px;
+  padding: 9px 15px;
+  font-size: 14px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: 1px solid transparent;
+  letter-spacing: 0.25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main .logo {
+  height: 185.6px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-bar .bar {
+  height: 46px;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  max-width: 584px;
+  border-radius: 25px;
+  border: 1px solid #dfe1e5;
+  justify-content: space-between;
+  padding: 5px 14px;
+  align-items: center;
+}
+
+.search-bar .bar:focus-within,
+.search-bar .bar:hover {
+  box-shadow: 0 0 10px #00000031;
+}
+
+.search-bar .bar svg {
+  height: 24px;
+}
+
+.search-bar .bar span {
+  color: #9aa0a6;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.search-bar .bar span:first-child svg {
+  padding: 0;
+  margin: 0 13px 0 0;
+}
+
+.search-bar .bar span:first-child {
+  cursor: auto;
+  padding: 0;
+}
+
+.search-bar .bar input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  font-size: 1em;
+}
+
+.search-bar .bar input:active {
+  box-shadow: none;
+}
+
+.search-bar div {
+  display: flex;
+  align-items: center;
+}
+
+.keyboard {
+  background: url(//www.gstatic.com/inputtools/images/tia.png) no-repeat center;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+
+.center-buttons {
+  padding: 0 20px;
+  height: 58px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-buttons button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+footer {
+  background: #f2f2f2;
+  font-family: arial, sans-serif;
+  font-size: 15px;
+}
+
+footer .footer-head {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  color: #70757a;
+}
+
+footer .links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+footer .links div ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+footer .links div ul li {
+  padding: 15px;
+  color: #70757a;
+}
