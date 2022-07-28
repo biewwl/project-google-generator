@@ -78,6 +78,10 @@ header div button {
   cursor: pointer;
 }
 
+main {
+  padding: 0 20px;
+}
+
 main .logo {
   height: 185.6px;
   display: flex;
@@ -89,7 +93,10 @@ main .logo {
 .search-bar {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
 }
 
 .search-bar .bar {
@@ -107,7 +114,33 @@ main .logo {
 
 .search-bar .bar:focus-within,
 .search-bar .bar:hover {
-  box-shadow: 0 0 10px #00000031;
+  box-shadow: 0 0 5px #22222223;
+}
+
+.search-bar .bar:focus-within {
+  border-bottom: none;
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.search-bar:focus-within .history,
+.history:focus,
+.history:focus-within,
+.history:active {
+  display: flex;
+}
+
+.search-bar .bar:focus-within ~ .history:before,
+.history:focus::before,
+.history:focus-within:before,
+.history:active:before {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  top: -7px;
+  background: inherit;
+  z-index: 2;
+  border-bottom: 1px solid #dfe1e5;
 }
 
 .search-bar .bar svg {
@@ -131,6 +164,10 @@ main .logo {
 .search-bar .bar span:first-child {
   cursor: auto;
   padding: 0;
+}
+
+.search-bar .bar span:last-child {
+  padding: 0 0 0 8px; 
 }
 
 .search-bar .bar input {
@@ -164,6 +201,7 @@ main .logo {
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 18px;
 }
 
 .center-buttons button {
@@ -181,6 +219,82 @@ main .logo {
   text-align: center;
   cursor: pointer;
   user-select: none;
+}
+
+.history {
+  display: none;
+  position: absolute;
+  top: 66px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 584px;
+  border: 1px solid #dfe1e5;
+  border-top: none;
+  box-shadow: 0 0 5px #22222223;
+  border-radius: 0 0 1.5em 1.5em;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.history ul {
+  padding: 5px 0;
+  list-style: none;
+  width: 100%;
+}
+
+.history ul:after {
+  content: "";
+  height: 7px;
+  width: 14px;
+  position: absolute;
+  top: -3.5px;
+  background: inherit;
+  z-index: 2;
+  background-color: #fff;
+  left: 0;
+}
+
+.history ul:before {
+  content: "";
+  height: 7px;
+  width: 14px;
+  position: absolute;
+  top: -3.5px;
+  background: inherit;
+  z-index: 2;
+  background-color: #fff;
+  right: 0;
+}
+
+.history ul li {
+  display: flex;
+  padding: 6px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.history ul li:hover {
+  background-color: #00000018;
+  cursor: default;
+}
+
+.history ul li span {
+  color: #52188c;
+}
+
+.history div {
+  background: url(https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp)
+    no-repeat 0 -21px;
+  background-size: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 0 13px 0 1px;
+}
+
+.history .center-buttons {
+  margin-bottom: 18px;
 }
 
 footer {
