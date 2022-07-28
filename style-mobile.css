@@ -1,0 +1,155 @@
+body {
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  padding: 0 7px 0 14px;
+}
+
+.desktop-header {
+  display: none;
+}
+
+.mobile-header .menu-text {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 5px;
+  color: #5f6368;
+}
+
+.mobile-header span:nth-child(2) {
+  color: #1a73e8;
+  position: relative;
+}
+
+.mobile-header span:nth-child(2)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 110%;
+  height: 2px;
+  background: #1a73e8;
+  margin: 0 10px;
+  bottom: -16px;
+  left: -12px;
+}
+
+.mobile-header div button {
+  margin: 0 8px;
+  padding: 9px 15px;
+  font-size: 14px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: 1px solid transparent;
+  letter-spacing: 0.25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mobile-header div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-header div span {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-header div span svg {
+  font-size: 2.5em;
+  color: #5f6368;
+  padding: 8px;
+}
+
+.desktop-main .logo {
+  height: 115px;
+}
+
+.desktop-main .logo img {
+  width: 155px;
+}
+
+.desktop-main .keyboard.button-show-history {
+  display: none;
+}
+
+.mobile-microphone {
+  display: flex !important;
+}
+
+.desktop-microphone {
+  display: none !important;
+}
+
+.desktop-main .search-bar .bar {
+  height: 42px;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  max-width: 584px;
+  border-radius: 25px;
+  border: 1px solid #dfe1e5;
+  justify-content: space-between;
+  padding: 5px 14px;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.center-buttons {
+  display: none !important;
+}
+
+.desktop-footer {
+  display: none;
+}
+
+.mobile-footer {
+  display: flex;
+  background: #f2f2f2;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  flex-direction: column;
+}
+
+.mobile-footer .white-space {
+  height: 45px;
+  width: 100%;
+  border-bottom: 1px solid #dadce0;
+}
+
+.mobile-footer .footer-head {
+  padding: 5px 0 7px 20px ;
+  border-bottom: 1px solid #dadce0;
+  color: #70757a;
+}
+
+.mobile-footer .links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 10px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mobile-footer .links div ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mobile-footer .links div ul li {
+  padding: 15px;
+  color: #70757a;
+}
+

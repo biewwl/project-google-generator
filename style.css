@@ -11,7 +11,11 @@ body {
   justify-content: space-between;
 }
 
-header {
+.mobile-header {
+  display: none;
+}
+
+.desktop-header {
   width: 100%;
   padding: 6px;
   display: flex;
@@ -19,7 +23,7 @@ header {
   justify-content: flex-end;
 }
 
-header ul {
+.desktop-header ul {
   display: flex;
   list-style: none;
   height: 48px;
@@ -27,46 +31,46 @@ header ul {
   align-items: center;
 }
 
-header ul li {
+.desktop-header ul li {
   padding-left: 15px;
   font-size: 13px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header ul li:hover {
+.desktop-header ul li:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-header ul li:last-child {
+.desktop-header ul li:last-child {
   padding-right: 15px;
 }
 
-header div {
+.desktop-header div {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-header div span {
+.desktop-header div span {
   margin: 0 12px;
   display: flex;
   align-items: center;
 }
 
-header div span svg {
+.desktop-header div span svg {
   font-size: 2.5em;
   color: #5f6368;
   padding: 8px;
 }
 
-header div span svg:hover {
+.desktop-header div span svg:hover {
   cursor: pointer;
   background-color: #00000018;
   border-radius: 50%;
 }
 
-header div button {
+.desktop-header div button {
   margin: 0 8px;
   padding: 9px 15px;
   font-size: 14px;
@@ -78,11 +82,11 @@ header div button {
   cursor: pointer;
 }
 
-main {
+.desktop-main {
   padding: 0 20px;
 }
 
-main .logo {
+.desktop-main .logo {
   height: 185.6px;
   display: flex;
   width: 100%;
@@ -90,7 +94,7 @@ main .logo {
   align-items: flex-end;
 }
 
-.search-bar {
+.desktop-main .search-bar {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -99,10 +103,10 @@ main .logo {
   padding: 20px 0;
 }
 
-.search-bar .bar {
+.desktop-main .search-bar .bar {
   height: 46px;
   display: flex;
-  background-color: white;
+  background-color: #fff;
   width: 100%;
   max-width: 584px;
   border-radius: 25px;
@@ -112,27 +116,27 @@ main .logo {
   align-items: center;
 }
 
-.search-bar .bar:focus-within,
-.search-bar .bar:hover {
+.desktop-main .search-bar .bar:focus-within,
+.desktop-main .search-bar .bar:hover {
   box-shadow: 0 0 5px #22222223;
 }
 
-.search-bar .bar:focus-within {
+.desktop-main .search-bar .bar:focus-within {
   border-bottom: none;
   border-radius: 1.5em 1.5em 0 0;
 }
 
-.search-bar:focus-within .history,
-.history:focus,
-.history:focus-within,
-.history:active {
+.desktop-main .search-bar:focus-within .history,
+.desktop-main .history:focus,
+.desktop-main .history:focus-within,
+.desktop-main .history:active {
   display: flex;
 }
 
-.search-bar .bar:focus-within ~ .history:before,
-.history:focus::before,
-.history:focus-within:before,
-.history:active:before {
+.desktop-main .search-bar .bar:focus-within ~ .history:before,
+.desktop-main .history:focus::before,
+.desktop-main .history:focus-within:before,
+.desktop-main .history:active:before {
   content: "";
   height: 7px;
   width: 100%;
@@ -143,11 +147,11 @@ main .logo {
   border-bottom: 1px solid #dfe1e5;
 }
 
-.search-bar .bar svg {
+.desktop-main .search-bar .bar svg {
   height: 24px;
 }
 
-.search-bar .bar span {
+.desktop-main .search-bar .bar span {
   color: #9aa0a6;
   padding: 0 8px;
   display: flex;
@@ -156,7 +160,7 @@ main .logo {
   cursor: pointer;
 }
 
-.search-bar .bar span:first-child svg {
+.desktop-main .search-bar .bar span:first-child svg {
   padding: 0;
   margin: 0 13px 0 0;
 }
@@ -166,11 +170,11 @@ main .logo {
   padding: 0;
 }
 
-.search-bar .bar span:last-child {
+.desktop-main .search-bar .bar span:last-child {
   padding: 0 0 0 8px; 
 }
 
-.search-bar .bar input {
+.desktop-main .search-bar .bar input {
   width: 100%;
   border: 0;
   outline: 0;
@@ -178,23 +182,27 @@ main .logo {
   font-size: 1em;
 }
 
-.search-bar .bar input:active {
+.desktop-main .search-bar .bar input:active {
   box-shadow: none;
 }
 
-.search-bar div {
+.desktop-main .search-bar div {
   display: flex;
   align-items: center;
 }
 
-.keyboard {
+.desktop-main .keyboard {
   background: url(//www.gstatic.com/inputtools/images/tia.png) no-repeat center;
   height: 24px;
   width: 24px;
   vertical-align: middle;
 }
 
-.center-buttons {
+.mobile-microphone {
+  display: none !important;
+}
+
+.desktop-main .center-buttons {
   padding: 0 20px;
   height: 58px;
   display: flex;
@@ -204,7 +212,7 @@ main .logo {
   margin-top: 18px;
 }
 
-.center-buttons button {
+.desktop-main .center-buttons button {
   background-color: #f8f9fa;
   border: 1px solid #f8f9fa;
   border-radius: 4px;
@@ -221,7 +229,7 @@ main .logo {
   user-select: none;
 }
 
-.history {
+.desktop-main .history {
   display: none;
   position: absolute;
   top: 66px;
@@ -236,7 +244,7 @@ main .logo {
   z-index: 3;
 }
 
-.history ul {
+.desktop-main .history ul {
   padding: 5px 0;
   list-style: none;
   width: 100%;
@@ -244,7 +252,7 @@ main .logo {
   flex-direction: column-reverse;
 }
 
-.history ul:after {
+.desktop-main .history ul:after {
   content: "";
   height: 7px;
   width: 14px;
@@ -256,7 +264,7 @@ main .logo {
   left: 0;
 }
 
-.history ul:before {
+.desktop-main .history ul:before {
   content: "";
   height: 7px;
   width: 14px;
@@ -268,23 +276,23 @@ main .logo {
   right: 0;
 }
 
-.history ul li {
+.desktop-main .history ul li {
   display: flex;
   padding: 6px 14px;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
 }
 
-.history ul li:hover {
+.desktop-main .history ul li:hover {
   background-color: #00000018;
   cursor: default;
 }
 
-.history ul li span {
+.desktop-main .history ul li span {
   color: #52188c;
 }
 
-.history div {
+.desktop-main .history div {
   background: url(https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp)
     no-repeat 0 -21px;
   background-size: 20px;
@@ -295,23 +303,23 @@ main .logo {
   margin: 0 13px 0 1px;
 }
 
-.history .center-buttons {
+.desktop-main .history .center-buttons {
   margin-bottom: 18px;
 }
 
-footer {
+.desktop-footer {
   background: #f2f2f2;
   font-family: arial, sans-serif;
   font-size: 15px;
 }
 
-footer .footer-head {
+.desktop-footer .footer-head {
   padding: 15px 30px;
   border-bottom: 1px solid #dadce0;
   color: #70757a;
 }
 
-footer .links {
+.desktop-footer .links {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -320,13 +328,17 @@ footer .links {
   font-size: 14px;
 }
 
-footer .links div ul {
+.desktop-footer .links div ul {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
 }
 
-footer .links div ul li {
+.desktop-footer .links div ul li {
   padding: 15px;
   color: #70757a;
+}
+
+.mobile-footer {
+  display: none;
 }
