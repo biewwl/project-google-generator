@@ -153,3 +153,72 @@ body {
   color: #70757a;
 }
 
+.desktop-main .search-bar {
+  position: static;
+}
+
+.desktop-main .search-bar .bar:focus-within {
+  position: fixed;
+  top: -3px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.desktop-main .search-bar .bar:focus-within .arrow {
+  display: flex !important;
+  color: #1a73e8;
+  font-size: 2em;
+  padding: 0;
+}
+
+.desktop-main .search-bar .bar:focus-within .search {
+  display: none !important;
+}
+
+.desktop-main .history {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 584px;
+  border: 0;
+  border-top: none;
+  box-shadow: none;
+  border-radius: 0;
+  flex-direction: column;
+  z-index: 3;
+  min-height: 100vh;
+}
+
+.desktop-main .history ul li {
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.desktop-main .history ul li .text {
+  width: 100%;
+}
+
+.desktop-main .history ul li span {
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  word-wrap: none;
+}
+
+.desktop-main .history div {
+  background: url(https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp)
+    no-repeat 0 -32px;
+  background-size: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+
+.delete {
+  font-size: 1.8em;
+  color: #5f6368;
+  display: block;
+}

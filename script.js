@@ -12,8 +12,11 @@ function createListItem(text) {
   const span = document.createElement("span");
   span.className = "text";
   span.innerText = text;
+  const deleteIcon = document.createElement("span");
+  deleteIcon.innerHTML = `<span class="iconify delete" data-icon="bi:x"></span>`;
   li.appendChild(icon);
   li.appendChild(span);
+  li.appendChild(deleteIcon);
   return li;
 }
 
@@ -44,5 +47,8 @@ list.addEventListener("click", (e) => {
   }
   if (e.target.classList.contains("text")) {
     e.target.parentElement.remove();
+  }
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.parentElement.remove();
   }
 });
