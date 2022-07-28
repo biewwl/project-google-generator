@@ -87,7 +87,9 @@ body {
 }
 
 .desktop-main .logo {
-  height: 185.6px;
+  min-height: 92px;
+  max-height: 290px;
+  height: calc(100vh - 560px);
   display: flex;
   width: 100%;
   justify-content: center;
