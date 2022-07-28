@@ -24,10 +24,10 @@ const createItem = () => {
   const input = inputCreate;
   const text = input.value;
   const li = createListItem(text);
-  if (text && document.querySelectorAll(".list-item").length < 5) {
+  // if (text && document.querySelectorAll(".list-item").length < 5) {
     list.appendChild(li);
     input.value = "";
-  }
+  // }
 };
 
 const handleEnter = (e) => {
